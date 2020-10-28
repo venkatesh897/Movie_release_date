@@ -1,3 +1,4 @@
+//Program to print release date of a movie
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
