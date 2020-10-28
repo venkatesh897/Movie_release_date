@@ -35,7 +35,7 @@ void display_release_date()
 	char movie_name[30];
 	printf("Enter movie: ");
 	scanf("%s", movie_name);
-	sprintf(cmd, "curl \"http://www.omdbapi.com/?apikey=602069c1&t=%s\" > %s", movie_name, MOVIE_DETAILS_FILE);
+	sprintf(cmd, "curl \"http://www.omdbapi.com/?apikey=602069c1&t=%s\" > %s -s", movie_name, MOVIE_DETAILS_FILE);
 	system(cmd);
 	char* release_date = get_release_date(MOVIE_DETAILS_FILE);
 	printf("The movie %s is released in %s", movie_name, release_date);
